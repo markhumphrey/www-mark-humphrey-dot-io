@@ -5,6 +5,11 @@ module.exports = function($stateProvider, $urlRouterProvider, $locationProvider)
   $locationProvider.html5Mode(true);
 
   $stateProvider
+  .state('home', {
+    url: "/",
+    templateUrl: "home/home.html",
+    controller: 'HomeCtrl',
+  })
   .state('view2', {
     url: "/view2",
     templateUrl: "view2/view2.html",
