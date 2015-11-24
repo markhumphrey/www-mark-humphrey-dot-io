@@ -8,6 +8,9 @@
   "devDependencies": {
     "bower": "^1.3.1",
     "browserify": "^12.0.1",
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-ruby-sass": "^2.0.6",
     "http-server": "^0.6.1",
     "jasmine-core": "^2.3.4",
     "karma": "~0.12",
@@ -16,13 +19,14 @@
     "karma-jasmine": "^0.3.5",
     "karma-junit-reporter": "^0.2.2",
     "protractor": "^2.1.0",
-    "shelljs": "^0.2.6"
+    "shelljs": "^0.2.6",
+    "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
-    "postinstall": "npm run browserify",
+    "postinstall": "gulp browserify",
     "prestart": "npm install",
-    "browserify": "browserify entry.js -o app/dist/bundle.js",
-    "start": "http-server -a localhost -p 8000 -c-1",
+    "oldstart": "http-server -a localhost -p 8000 -c-1",
+    "start": "gulp default",
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
     "test-single-run": "karma start karma.conf.js  --single-run",
@@ -37,6 +41,7 @@
     "angular-loader": "^1.4.8",
     "angular-mocks": "^1.4.8",
     "angular-route": "^1.4.8",
+    "angular-ui-bootstrap": "^0.14.3",
     "angular-ui-router": "^0.2.15",
     "modernizr": "^3.2.0",
     "normalize-css": "^2.3.1"
