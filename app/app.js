@@ -7,6 +7,7 @@ angular.module('myApp', [
   'myApp.view2',
   'myApp.version'
 ]).
-config(function($stateProvider, $urlRouterProvider) {
+config(function($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise('/view1');
+  $locationProvider.html5Mode(true);
 });
