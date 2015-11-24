@@ -1,5 +1,8 @@
 /* app css stylesheet */
 
+/* https://angular-ui.github.io/bootstrap/ : handle href boostrap/angularjs conflict
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;

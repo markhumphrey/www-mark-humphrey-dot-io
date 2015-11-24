@@ -12,7 +12,6 @@ var app = angular.module('myApp', [
   require("angular-ui-router"),
   'myApp.view1',
   'myApp.view2',
-  'myApp.version'
 ]);
 
 require("./view1");

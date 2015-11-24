@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function($stateProvider, $urlRouterProvider, $locationProvider) {
-  $urlRouterProvider.otherwise('/view1');
+  $urlRouterProvider.otherwise('/');
   $locationProvider.html5Mode(true);
 
   $stateProvider
