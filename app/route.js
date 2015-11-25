@@ -10,6 +10,11 @@ module.exports = function($stateProvider, $urlRouterProvider, $locationProvider)
     templateUrl: "home/home.html",
     controller: 'HomeCtrl',
   })
+  .state('project', {
+    url: "/project",
+    templateUrl: "project/project.html",
+    controller: 'ProjectCtrl',
+  })
   .state('view2', {
     url: "/view2",
     templateUrl: "view2/view2.html",

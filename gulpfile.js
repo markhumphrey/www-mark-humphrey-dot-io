@@ -3,11 +3,15 @@ var connect = require('gulp-connect');
 var sass = require('gulp-ruby-sass');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
+var historyApiFallback = require('connect-history-api-fallback');
 
 gulp.task('connect', function() {
   connect.server({
-    root: [__dirname],
-    port: 8000
+    root: [__dirname + "/app/"],
+    port: 8000,
+    middleware: function(connect, opt) {
+      return [ historyApiFallback() ];
+    }
   });
 });
 

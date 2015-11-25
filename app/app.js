@@ -11,11 +11,13 @@ var app = angular.module('myApp', [
   require("angular-route"),
   require("angular-ui-router"),
   'myApp.home',
+  'myApp.project',
   'myApp.view1',
   'myApp.view2',
 ]);
 
 require("./home");
+require("./project");
 require("./view1");
 require("./view2");
 app.config(require("./route"));
