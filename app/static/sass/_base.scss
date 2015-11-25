@@ -21,6 +21,13 @@ h6, .h6 {
 /*  color: #333;*/
 }
 
+.jumbotron {
+  background-image: url(/app/static/images/home/laptop-splash.jpeg);
+  background-size: cover;
+  color: $primary-color-light;
+  height: 400px;
+}
+
 .footer {
   bottom: 0;
   width: 100%;
