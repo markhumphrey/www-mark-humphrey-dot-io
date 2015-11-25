@@ -1,4 +1,4 @@
 'use strict';
-var app = require('angular').module('myApp.blog', []);
+var app = require('angular').module('app.blog', []);
 
 app.controller('BlogCtrl', ['$scope', require('./blog')]);

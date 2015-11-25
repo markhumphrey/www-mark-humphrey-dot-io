@@ -4,16 +4,15 @@ var angular = require("angular");
 require("angular-loader");
 require("angular-mocks");
 //require("modernizr");
-require("normalize-css");
 
-var app = angular.module('myApp', [
+var app = angular.module('app', [
   require("angular-ui-bootstrap"),
   require("angular-route"),
   require("angular-ui-router"),
-  'myApp.home',
-  'myApp.project',
-  'myApp.blog',
-  'myApp.about',
+  'app.home',
+  'app.project',
+  'app.blog',
+  'app.about',
 ]);
 
 require("./home");

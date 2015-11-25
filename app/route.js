@@ -18,11 +18,11 @@ module.exports = function($stateProvider, $urlRouterProvider, $locationProvider)
   .state('blog', {
     url: "/blog",
     templateUrl: "blog/blog.html",
-    controller: 'View2Ctrl',
+    controller: 'BlogCtrl',
   })
   .state('about', {
     url: "/about",
     templateUrl: "about/about.html",
-    controller: 'View1Ctrl',
+    controller: 'AboutCtrl',
   });
 };

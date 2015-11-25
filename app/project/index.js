@@ -1,4 +1,4 @@
 'use strict';
-var app = require('angular').module('myApp.project', []);
+var app = require('angular').module('app.project', []);
 
 app.controller('ProjectCtrl', ['$scope', require('./project')]);
