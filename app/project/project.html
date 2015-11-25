@@ -1,2 +1,19 @@
 <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
 </a>
+<div class="bs-example" data-example-id="thumbnails-with-custom-content">
+  <div class="row">
+    <div class="col-sm-12 col-md-4">
+      <div class="thumbnail">
+        <img src="{{ url_for('static', filename='images/project/' + project.id + '/preview.png') }}" alt="{{project.name}} preview">
+        <div class="caption">
+          <h3>{{project.name}}</h3>
+          <p>{{project.description}}</p>
+          <p>
+            <a href="{{project.id}}" class="btn btn-primary" role="button">View Project</a>
+            <a href="https://github.com/markhumphrey/{{project.id}}/" class="btn btn-default" role="button">GitHub</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

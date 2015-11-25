@@ -15,14 +15,14 @@ module.exports = function($stateProvider, $urlRouterProvider, $locationProvider)
     templateUrl: "project/project.html",
     controller: 'ProjectCtrl',
   })
-  .state('view2', {
-    url: "/view2",
-    templateUrl: "view2/view2.html",
+  .state('blog', {
+    url: "/blog",
+    templateUrl: "blog/blog.html",
     controller: 'View2Ctrl',
   })
-  .state('view1', {
-    url: "/view1",
-    templateUrl: "view1/view1.html",
+  .state('about', {
+    url: "/about",
+    templateUrl: "about/about.html",
     controller: 'View1Ctrl',
   });
 };

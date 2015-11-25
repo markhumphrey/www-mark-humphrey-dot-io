@@ -12,14 +12,14 @@ var app = angular.module('myApp', [
   require("angular-ui-router"),
   'myApp.home',
   'myApp.project',
-  'myApp.view1',
-  'myApp.view2',
+  'myApp.blog',
+  'myApp.about',
 ]);
 
 require("./home");
 require("./project");
-require("./view1");
-require("./view2");
+require("./blog");
+require("./about");
 app.config(require("./route"));
 
 global.twttr = function(d, s, id) {
