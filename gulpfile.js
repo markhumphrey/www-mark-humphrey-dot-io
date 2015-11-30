@@ -9,7 +9,7 @@ gulp.task('connect', function() {
   connect.server({
     root: [__dirname + "/app/"],
     port: 8000,
-    livereload: true,
+    //livereload: true,
     middleware: function(connect, opt) {
       return [
         (function() {

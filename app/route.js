@@ -7,22 +7,22 @@ module.exports = function($stateProvider, $urlRouterProvider, $locationProvider)
   $stateProvider
   .state('home', {
     url: "/",
-    templateUrl: "home/home.html",
+    templateUrl: "components/home/home.html",
     controller: 'HomeCtrl',
   })
   .state('project', {
     url: "/project",
-    templateUrl: "project/project.html",
+    templateUrl: "components/project/index.html",
     controller: 'ProjectCtrl',
   })
   .state('blog', {
     url: "/blog",
-    templateUrl: "blog/blog.html",
+    templateUrl: "components/blog/blog.html",
     controller: 'BlogCtrl',
   })
   .state('about', {
     url: "/about",
-    templateUrl: "about/about.html",
+    templateUrl: "components/about/about.html",
     controller: 'AboutCtrl',
   });
 };
