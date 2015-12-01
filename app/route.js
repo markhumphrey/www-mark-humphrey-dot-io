@@ -7,7 +7,7 @@ module.exports = function($stateProvider, $urlRouterProvider, $locationProvider)
   $stateProvider
   .state('home', {
     url: "/",
-    templateUrl: "components/home/home.html",
+    templateUrl: "components/home/index.html",
     controller: 'HomeCtrl',
   })
   .state('project', {
@@ -15,14 +15,29 @@ module.exports = function($stateProvider, $urlRouterProvider, $locationProvider)
     templateUrl: "components/project/index.html",
     controller: 'ProjectCtrl',
   })
+  .state('project-detail', {
+    url: "/project/:id",
+    templateUrl: "components/project/index.html",
+    controller: 'ProjectCtrl',
+  })
   .state('blog', {
     url: "/blog",
-    templateUrl: "components/blog/blog.html",
+    templateUrl: "components/blog/index.html",
+    controller: 'BlogCtrl',
+  })
+  .state('blog-page', {
+    url: "/blog/page/{page:int}",
+    templateUrl: "components/blog/index.html",
+    controller: 'BlogCtrl',
+  })
+  .state('blog-detail', {
+    url: "/blog/{year:int}/{month:int}/:name/",
+    templateUrl: "components/blog/index.html",
     controller: 'BlogCtrl',
   })
   .state('about', {
     url: "/about",
-    templateUrl: "components/about/about.html",
+    templateUrl: "components/about/index.html",
     controller: 'AboutCtrl',
   });
 };

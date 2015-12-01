@@ -1,0 +1,19 @@
+<div>
+  <div ng-repeat="post in posts" class="blog-post text-left">
+    <h2 class="blog-post-title"><a href="{{ post_url }}">{{ post.title }}</a></h2>
+    <p class="blog-post-date">
+      {{ post.date | date : 'mediumDate' }} {{ date.strftime('%B %d, %Y') }}
+    </p>
+    <p>
+      <a class="twitter-share-button" data-count="none" ng-href="https://twitter.com/intent/tweet?text={{ post.title }}&hashtags=DOCKER,DOCKER&via=Mark_S_Humphrey&url={{ post.post_url }}">
+          Tweet
+        </a>
+    </p>
+    <p>
+      {{ post.content }}
+    </p>
+    <p>
+      <a ui-sref="post_detail.post_url" href="{{ post.post_url }}">Read More</a>
+    </p>
+  </div>
+</div>
