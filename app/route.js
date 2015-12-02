@@ -17,7 +17,7 @@ module.exports = function($stateProvider, $urlRouterProvider, $locationProvider)
   })
   .state('project-detail', {
     url: "/project/:id",
-    templateUrl: "components/project/index.html",
+    templateUrl: "components/project/views/detail.html",
     controller: 'ProjectCtrl',
   })
   .state('blog', {

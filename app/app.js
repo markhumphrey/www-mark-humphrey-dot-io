@@ -16,6 +16,7 @@ var app = angular.module('app', [
   'app.about',
 ]);
 
+require("./shared");
 require("./components/home");
 require("./components/project");
 require("./components/blog");

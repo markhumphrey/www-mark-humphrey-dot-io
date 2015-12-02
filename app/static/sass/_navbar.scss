@@ -1,4 +1,52 @@
 
+/*
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+}
+*/
+
+.navbar {
+  background-image: url(/static/images/home/laptop-splash.jpeg);
+  background-size: cover;
+  color: $primary-color-light;
+  border-color: transparent;
+  //height: 400px;
+}
+
+.navbar li { color: #000 }
+
+.jumbotron {
+background-color: transparent;
+background: transparent;
+border-color: transparent;
+}
+/*
+.jumbotron {
+  background-image: url(/static/images/home/laptop-splash.jpeg);
+  background-size: cover;
+  color: $primary-color-light;
+  //height: 400px;
+}
+*/
+
+.shrink {
+  height: 50px !important;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -o-transition:  all 500ms ease;
+  transition: all 500ms ease;
+}
+
+.grow {
+  height: 400px !important;
+  -webkit-transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -o-transition:  all 500ms ease;
+  transition: all 500ms ease;
+}
+
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 /*
 .navbar-wrapper {
@@ -22,5 +70,26 @@
 }
 .navbar-wrapper .navbar .container {
   width: auto;
+}
+*/
+
+/*
+nav.navbar.shrink {
+  min-height: 35px;
+}
+
+nav.shrink a {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  font-size: 15px;
+}
+
+nav.shrink .navbar-brand {
+  font-size: 25px;
+}
+
+nav.shrink .navbar-toggle {
+  padding: 4px 5px;
+  margin: 8px 15px 8px 0;
 }
 */
