@@ -2,7 +2,7 @@ module.exports = function(MODULE_ROOT, $window) {
 
   function link(scope, element, attrs) {
     angular.element($window).on('scroll', function() {
-      if ($window.pageYOffset > 100) {
+      if ($window.pageYOffset > 50) {
         scope.shrink();
       } else {
         scope.grow();
