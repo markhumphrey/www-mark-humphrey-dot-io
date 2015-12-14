@@ -4,11 +4,13 @@ server {
 
     location / {
         root /usr/share/nginx/html/static;
+        try_files $uri $uri/ /index.html =404;
     }
 
     location /api {
+        rewrite /api/(.+) /$1 break;
         include uwsgi_params;
-        uwsgi_pass web:8080;
+        uwsgi_pass api:8080;
     }
 
 }
