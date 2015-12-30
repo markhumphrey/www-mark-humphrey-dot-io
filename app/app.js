@@ -23,6 +23,11 @@ require("./components/blog");
 require("./components/about");
 app.config(require("./route"));
 
+app.config(function($resourceProvider) {
+  $resourceProvider.defaults.stripTrailingSlashes = false;
+});
+
+
 global.twttr = function(d, s, id) {
    var js, fjs = d.getElementsByTagName(s)[0],
      p = /^http:/.test(d.location) ? 'http' : 'https';
