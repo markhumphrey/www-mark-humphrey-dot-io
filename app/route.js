@@ -20,6 +20,7 @@ module.exports = function($stateProvider, $urlRouterProvider, $locationProvider)
     templateUrl: "components/project/views/detail.html",
     controller: 'ProjectCtrl',
   })
+  /*
   .state('blog', {
     url: "/blog",
     templateUrl: "components/blog/index.html",
@@ -35,6 +36,7 @@ module.exports = function($stateProvider, $urlRouterProvider, $locationProvider)
     templateUrl: "components/blog/index.html",
     controller: 'BlogCtrl',
   })
+  */
   .state('about', {
     url: "/about",
     templateUrl: "components/about/index.html",
