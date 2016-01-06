@@ -3,7 +3,7 @@ server {
     server_name 192.168.99.100;
 
     location / {
-        root /usr/share/nginx/html/static;
+        root /usr/share/nginx/html;
         try_files $uri $uri/ /index.html =404;
     }
 
