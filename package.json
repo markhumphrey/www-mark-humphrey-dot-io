@@ -16,9 +16,7 @@
   },
   "scripts": {
     "postinstall": "gulp build",
-    "prestart": "npm install",
-    "start": "gulp default",
-    "pretest": "npm install"
+    "start": "gulp default"
   },
   "dependencies": {
     "angular": "^1.4.8",
