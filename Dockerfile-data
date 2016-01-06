@@ -1,0 +1,30 @@
+FROM node:latest
+
+WORKDIR /app
+
+# add config files for front-end dependencies and build
+ADD package.json /app/package.json
+ADD gulpfile.js /app/gulpfile.js
+
+# add remainder of application source code
+ADD . /app
+
+# TODO: remove ruby dependency required for gulp-ruby-sass build
+RUN apt-get update
+RUN apt-get install -y ruby
+RUN gem install sass
+
+# run front end install and build
+RUN npm install --unsafe-perm
+
+# copy build artifacts to nginx standard location
+RUN mkdir -p /usr/share/nginx/html
+RUN cp -R /app/dist/. /usr/share/nginx/html/
+
+# expose build artifacts as data volume
+VOLUME /usr/share/nginx/html
+
+# by default this is a data volume container but docker-compose needs a command
+# https://github.com/docker/compose/issues/942
+CMD [ '/bin/echo' ]
+ENTRYPOINT []

@@ -6,5 +6,6 @@ COPY markhumphrey.io /etc/nginx/sites-available/markhumphrey.io
 RUN mkdir /etc/nginx/sites-enabled/
 RUN ln -s /etc/nginx/sites-available/markhumphrey.io /etc/nginx/sites-enabled/markhumphrey.io
 
-# add static assets
-COPY app /usr/share/nginx/html/static
+# NOTE: this setup depends on static assets being built externally
+# and accessed through a bind mount at the default of /usr/share/nginx/html
+# https://hub.docker.com/_/nginx/
