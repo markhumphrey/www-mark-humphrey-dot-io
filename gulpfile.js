@@ -11,7 +11,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var paths = {
  dist: 'dist/',
  scriptEntry: 'app/app.js',
- scripts: ['app/app.js', 'app/components/**/*.js', 'app/shared/**/*.js'],
+ scripts: ['app/*.js', 'app/components/**/*.js', 'app/shared/**/*.js'],
  libs: ['node_modules/**/*.js'],
  styles: ['app/static/sass/**/*'],
  styleEntry: 'app/static/sass/app.scss',
