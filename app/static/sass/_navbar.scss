@@ -8,8 +8,10 @@
 */
 
 .navbar {
-  background-image: url(/static/images/home/laptop-splash.jpeg);
+  background-image: url(/images/home/laptop-splash.jpeg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   color: $primary-color-light;
   border-color: transparent;
   //height: 400px;
