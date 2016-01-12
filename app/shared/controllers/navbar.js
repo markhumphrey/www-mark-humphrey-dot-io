@@ -1,5 +1,7 @@
 module.exports = function($scope, navbarService) {
 
+  $scope.navbarService = navbarService;
+
   $scope.grow = function() {
     $scope.extended = true;
   };

@@ -26,3 +26,13 @@ app.config(require("./route"));
 app.config(function($resourceProvider) {
   $resourceProvider.defaults.stripTrailingSlashes = false;
 });
+
+app.run(["$rootScope", "NavbarService", function($rootScope, navbarService) {
+  $rootScope.$on('$stateChangeStart',
+    function(event, toState, toParams, fromState, fromParams) {
+      if (toState.data) {
+        navbarService.pageTitle = toState.data.pageTitle || "";
+        navbarService.pageSubtitle = toState.data.pageSubtitle || "";
+      }
+    });
+}]);
