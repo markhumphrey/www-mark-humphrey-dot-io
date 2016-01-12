@@ -26,6 +26,7 @@
     "angular-route": "^1.4.8",
     "angular-ui-bootstrap": "^0.14.3",
     "angular-ui-router": "^0.2.15",
-    "bootstrap-sass": "^3.3.6"
+    "bootstrap-sass": "^3.3.6",
+    "mongo-lite-js": "github:markhumphrey/mongo-lite-js"
   }
 }

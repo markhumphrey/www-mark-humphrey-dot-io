@@ -9,16 +9,38 @@ module.exports = function($stateProvider, $urlRouterProvider, $locationProvider)
     url: "/",
     templateUrl: "components/home/index.html",
     controller: 'HomeCtrl',
+    data : {
+      pageTitle: "MARK HUMPHREY",
+      pageSubtitle: "Software Developer & Leader",
+    }
   })
   .state('project', {
     url: "/project",
     templateUrl: "components/project/index.html",
-    controller: 'ProjectCtrl',
+    data : {
+      pageTitle: "PROJECTS",
+      pageSubtitle: "Take a moment to view some",
+    }
   })
   .state('project-detail', {
-    url: "/project/:id",
-    templateUrl: "components/project/views/detail.html",
-    controller: 'ProjectCtrl',
+    url: "/project/:projectId",
+    templateUrl: function ($stateParams) {
+        return 'components/project/'+ $stateParams.projectId + '.html';
+    },
+    data : {
+      pageTitle: "PROJECT DETAILS",
+      pageSubtitle: "Subtitle",
+    }
+  })
+  .state('project-detail.demo', {
+    url: "/demo",
+    templateUrl: function ($stateParams) {
+        return 'components/project/'+ $stateParams.projectId + '.demo.html';
+    },
+    data : {
+      pageTitle: "PROJECT DEMO",
+      pageSubtitle: "Subtitle",
+    }
   })
   /*
   .state('blog', {
@@ -41,5 +63,10 @@ module.exports = function($stateProvider, $urlRouterProvider, $locationProvider)
     url: "/about",
     templateUrl: "components/about/index.html",
     controller: 'AboutCtrl',
+    data : {
+      pageTitle: "WHO I AM",
+      pageSubtitle: "Subtitle",
+    }
   });
+
 };
